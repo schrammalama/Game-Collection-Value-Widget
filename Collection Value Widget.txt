@@ -19,7 +19,7 @@ collectionValue = json[0].content["$t"]
 let w = new ListWidget()
 w.backgroundColor = new Color("#000080")
 
-// Add the value of the stock to the widget
+// Add the value of the collection to the widget
 t = w.addText(collectionValue)
 t.textColor = Color.white()
 t.font = new Font("Avenir-Heavy",20)
