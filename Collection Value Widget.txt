@@ -1,0 +1,28 @@
+// The URL of your JSON endpoint
+const endpoint = “<<URL goes here>>”
+
+// Function that performs the request to the JSON endpoint
+async function loadItems() {
+	let at = endpoint
+	let req = new Request(at)
+	let corpo = await req.loadJSON()
+	// We return just the cells
+	return corpo.feed.entry
+}
+// Request the spreadsheet data
+let json = await loadItems()
+
+// Obtaining the content of the exact cell we are looking for
+collectionValue = json[0].content["$t"]
+
+// Create the widget
+let w = new ListWidget()
+w.backgroundColor = new Color("#000080")
+
+// Add the value of the stock to the widget
+t = w.addText(collectionValue)
+t.textColor = Color.white()
+t.font = new Font("Avenir-Heavy",20)
+
+Script.setWidget(w)
+Script.complete()
