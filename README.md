@@ -2,7 +2,7 @@
 This is a iPhone widget that tracks your game collection value.
 This method uses http://pricecharting.com/ to track your collection, without paying for their API.
 
-In order to use this you will need Scriptable a completely app from the App Store, you will also need a blank Google Sheets.
+In order to use this you will need Scriptable a completely free app from the App Store, you will also need a blank Google Sheets.
 
 The way this works is instead of contacting an API for information we rip it stright from the webpage,
 using the IMPORTXML function on Google Sheets.
